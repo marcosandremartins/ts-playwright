@@ -1,0 +1,33 @@
+##############################
+## Playwright
+##############################
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+##############################
+## node
+##############################
+package-lock.json
+
+##############################
+## Visual Studio Code
+##############################
+.vscode/
+.github/
+.claude/
+.playwright-cli/
+.code-workspace
+
+##############################
+## OS X
+##############################
+.DS_Store
+
+##############################
+## Miscellaneous
+##############################
+*.log
+*.png
