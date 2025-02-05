@@ -23,6 +23,13 @@ test.describe('SwagLabs Tests', () => {
     await page.click(dataTestLoginButton);
 
     await expect(page).toHaveURL(/inventory.html/);
+    
+    const firstProductFromInventory = page.getByRole("button", {name: "Add to cart"}).nth(0)
+    await firstProductFromInventory.click()
+
+    const removeProductFromCartButton = page.getByRole("button", {name: "Remove"})
+    await expect(removeProductFromCartButton).toBeVisible()
+    
     await page.screenshot({ path: 'example.png' });
   });
 
