@@ -1,10 +1,29 @@
-import { defineConfig } from '@playwright/test';
+import {defineConfig, devices} from '@playwright/test';
+import {defineBddConfig} from 'playwright-bdd';
+
+
+const testDir = defineBddConfig({
+    paths: ['features/*.feature'],
+    require: ['steps/*.ts'],
+    importTestFrom: 'fixtures/steps_fixtures.ts',
+    quotes: 'single'
+});
 
 export default defineConfig({
-  use: {
-    browserName: 'chromium',
-    headless: false,
-    screenshot: 'on',
-    trace: 'on',
-  },
+    testDir,
+
+    // global timeout
+    timeout: 180000,
+    projects: [
+        {
+            name: 'chromium',
+            use: {
+                ...devices['Desktop Chrome'],
+                viewport: {
+                    width: 1180,
+                    height: 800
+                },
+            }
+        }
+    ]
 });

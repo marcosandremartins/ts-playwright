@@ -1,40 +1,35 @@
-<h1 align="center" style="font-weight: bold;">TS Playwright</h1>
+## Setup
 
-<p align="center">
- <a href="#tech">Technologies</a> • 
- <a href="#started">Getting Started</a> •
- <a href="#contribute">Contribute</a>
-</p>
+⚙️ How to install and run the application locally.
 
-<h2 id="technologies">💻 Technologies</h2>
+### **1️⃣ Install Dependencies**
 
-- TypeScript
-- Playwright
+✅ You need latest Node.Js version, that's it!
 
-<h2 id="started">🚀 Getting started</h2>
+All other dependencies are listed in the `package.json` file and extra dependencies like browser support is automatized
+and run on post install.
 
-<h3>Prerequisites</h3>
+Run the following usual npm command to install all of them, it will also post install browsers:
 
-- [nodejs](https://nodejs.org/en)
-- [playwright](https://playwright.dev/)
-
-<h3>Cloning</h3>
-
-```bash
-git clone git@github.com:marcosandremartins/ts-playwright.git
-```
-
-<h3>Starting</h3>
-
-```bash
+```sh
 npm install
-npx playwright test
 ```
 
-<h2 id="contribute">📫 Contribute</h2>
+### **2️⃣ Run the Application**
 
-1.  Clone this repository
-1.  Create your feature branch: `git checkout -b my-new-feature`
-1.  Commit your changes: `git commit -am 'feat: Add some feature'`
-1.  Push to the branch: `git push origin my-new-feature`
-1.  Submit a pull request
+Use this command as is to run a scenario that covers a complete flow, from:
+
+- Login
+- Select a product from inventory
+- See details
+- Add it to cart
+- See cart
+- Assert product
+
+IMPORTANT:
+- Use classic Windows CMD terminal!
+- Do not use POWERSHELL!
+- If you want to use it, please change operator "&&", or it will not work.
+```sh
+npx bddgen && npx playwright test showcase chromium --headed -g @ready
+```

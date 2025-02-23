@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "npx bddgen && npx playwright test chromium --headed",
+    "postinstall": "playwright install"
   },
   "dependencies": {
-    "playwright": "file:",
-    "ts-playwright": "file:"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/browser-chromium": "^1.50.1",
+    "@playwright/browser-firefox": "^1.50.1",
+    "@playwright/browser-webkit": "^1.50.1",
     "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.1"
+    "playwright": "^1.50.1",
+    "playwright-bdd": "^8.1.0",
+    "@types/node": "^22.13.1",
+    "typescript": "^5.3.2"
   }
 }

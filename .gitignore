@@ -28,3 +28,4 @@ package-lock.json
 ##############################
 *.log
 *.png
+/.features-gen/
