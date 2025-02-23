@@ -35,7 +35,6 @@ When(/^the user picks product "([^"]*)" from the available products$/, async (
 ) => {
     mProduct = product;
     inventoryPage = new InventoryPage(page);
-    // await inventoryPage.open();
     await inventoryPage.pickAProduct(mProduct);
 });
 
