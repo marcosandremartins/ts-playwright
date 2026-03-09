@@ -6,6 +6,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+.playwright-cli/
 
 ##############################
 ## node
@@ -16,9 +17,6 @@ package-lock.json
 ## Visual Studio Code
 ##############################
 .vscode/
-.github/
-.claude/
-.playwright-cli/
 .code-workspace
 
 ##############################

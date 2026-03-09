@@ -1,0 +1,5 @@
+using the playwright-cli
+perform exploratory tests on saucelabs webpage
+navigate in inventory and cart pages, add and remove items
+while doing all of this collect information in the background like console and javascript errors, DOM inspection, etc
+write me a report in markdown format inside the 'docs' folder of your findings and action plan for corrections
